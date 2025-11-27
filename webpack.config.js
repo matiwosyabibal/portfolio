@@ -27,16 +27,19 @@ module.exports = {
       },
     ],
   },
+
+  // ✅ plugins section fixed
   plugins: [
-  new HtmlWebpackPlugin({
-    template: './public/index.html',
-  }),
-  new CopyWebpackPlugin({
-    patterns: [
-      { from: 'public/image', to: 'image' },
-    ],
-  }),
-],
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'public/image', to: 'image' },
+      ],
+    }),
+  ],
+
   devServer: {
     static: {
       directory: path.join(__dirname, 'public'),
