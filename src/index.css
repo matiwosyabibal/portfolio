@@ -286,7 +286,7 @@ code {
   height: 0.5rem;
 }
 
-.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+.space-y-3> :not([hidden])~ :not([hidden]) {
   margin-top: 0.75rem;
 }
 
@@ -358,7 +358,7 @@ code {
   display: flex;
 }
 
-.space-x-8 > :not([hidden]) ~ :not([hidden]) {
+.space-x-8> :not([hidden])~ :not([hidden]) {
   margin-left: 2rem;
 }
 
@@ -470,8 +470,8 @@ code {
   right: 0;
   bottom: 0;
   background: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3), transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3), transparent 50%),
-              radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2), transparent 50%);
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3), transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2), transparent 50%);
 }
 
 /* About Section - Professional Static Blue */
@@ -487,9 +487,9 @@ code {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
-    repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.05) 35px, rgba(255,255,255,.05) 70px),
-    repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(255,255,255,.02) 35px, rgba(255,255,255,.02) 70px);
+  background-image:
+    repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, .05) 35px, rgba(255, 255, 255, .05) 70px),
+    repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(255, 255, 255, .02) 35px, rgba(255, 255, 255, .02) 70px);
 }
 
 .about-card {
@@ -541,7 +541,7 @@ code {
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
+  background:
     radial-gradient(circle at 20% 50%, rgba(52, 152, 219, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 50%, rgba(155, 89, 182, 0.1) 0%, transparent 50%);
 }
@@ -596,7 +596,7 @@ code {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
+  background-image:
     radial-gradient(circle at 25% 25%, #ff6b6b 0%, transparent 50%),
     radial-gradient(circle at 75% 75%, #4ecdc4 0%, transparent 50%);
   opacity: 0.1;
@@ -887,7 +887,7 @@ code {
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
+  background:
     radial-gradient(ellipse at top, rgba(120, 119, 198, 0.3), transparent 50%),
     radial-gradient(ellipse at bottom, rgba(255, 119, 198, 0.2), transparent 50%);
 }
@@ -1109,11 +1109,11 @@ nav:hover::before {
   .skills-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .contact-card {
     padding: 2rem;
   }
-  
+
   .project-card {
     padding: 1.5rem;
   }
