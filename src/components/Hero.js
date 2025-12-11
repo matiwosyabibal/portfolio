@@ -4,12 +4,12 @@ const Hero = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(100);
-  
+
   const roles = ['Software Engineer', 'Full Stack Developer'];
   const [currentRole, setCurrentRole] = useState(roles[0]);
   const [roleText, setRoleText] = useState('');
   const [charIndex, setCharIndex] = useState(0);
-  
+
   // Color palette for the role text
   const colors = [
     '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEEAD',
@@ -23,7 +23,7 @@ const Hero = () => {
     const timer = setTimeout(() => {
       const i = loopNum % roles.length;
       const currentRole = roles[i];
-      
+
       if (isDeleting) {
         // Delete one character at a time
         setRoleText(prev => prev.slice(0, -1));
@@ -53,10 +53,10 @@ const Hero = () => {
   }, [charIndex, isDeleting, loopNum, typingSpeed]);
 
   return (
-    <section 
+    <section
       id="hero"
       className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden"
-      style={{ 
+      style={{
         backgroundImage: "url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -66,14 +66,14 @@ const Hero = () => {
     >
       {/* Dark overlay with 70% opacity */}
       <div className="absolute inset-0 bg-black/70 z-0"></div>
-      
+
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between relative z-10">
         {/* Left side - Text content */}
         <div className="text-center md:text-left max-w-2xl">
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg">
-            Matiwos Yabibal 
+            Matiwos Yabibal
           </h1>
-          
+
           <div className="min-h-32 mb-8">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-md">
               I am a
@@ -81,8 +81,8 @@ const Hero = () => {
             <div className="h-24 md:h-32">
               <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold">
                 {roleText.split('').map((char, index) => (
-                  <span 
-                    key={index} 
+                  <span
+                    key={index}
                     style={{
                       color: colors[index % colors.length],
                       textShadow: '0 0 10px rgba(0, 0, 0, 0.5)'
@@ -98,9 +98,9 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-            <button className="px-10 py-4 bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-lg">
+            <a href="#projects" className="px-10 py-4 bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-lg inline-block">
               View Projects
-            </button>
+            </a>
             <button className="px-10 py-4 bg-transparent border-2 border-white/40 hover:border-white/70 text-white hover:bg-white/10 font-medium rounded-full transition-all duration-300 transform hover:scale-105 text-lg">
               Download CV
             </button>

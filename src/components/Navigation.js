@@ -58,11 +58,10 @@ function Navigation() {
                   e.preventDefault();
                   scrollToSection(link.id);
                 }}
-                className={`nav-link transition-colors duration-200 ${
-                  activeSection === link.id 
-                    ? 'text-white font-semibold border-b-2 border-purple-500' 
-                    : 'text-gray-300 hover:text-white'
-                }`}
+                className={`nav-link transition-colors duration-200 ${activeSection === link.id
+                  ? 'text-white font-semibold border-b-2 border-purple-500'
+                  : 'text-gray-300 hover:text-white'
+                  }`}
               >
                 {link.label}
               </a>

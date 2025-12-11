@@ -57,49 +57,49 @@ function Skills() {
       name: 'TypeScript',
       logo: '📘',
       color: 'from-blue-500 to-blue-700',
-      cardBg: 'bg-gradient-to-br from-blue-900/70 via-slate-900/60 to-sky-900/70'
+      cardBg: 'bg-gradient-to-br from-violet-900/70 via-purple-900/60 to-indigo-900/70'
     },
     {
       name: 'Next.js',
       logo: '▲',
       color: 'from-gray-700 to-gray-900',
-      cardBg: 'bg-gradient-to-br from-zinc-900/70 via-slate-900/60 to-black/80'
+      cardBg: 'bg-gradient-to-br from-purple-900/70 via-fuchsia-900/60 to-violet-900/70'
     },
     {
       name: 'MongoDB',
       logo: '🍃',
       color: 'from-green-500 to-green-700',
-      cardBg: 'bg-gradient-to-br from-emerald-900/70 via-slate-900/60 to-green-900/70'
+      cardBg: 'bg-gradient-to-br from-violet-900/70 via-purple-900/60 to-fuchsia-900/70'
     },
     {
       name: 'Express.js',
       logo: '🚂',
       color: 'from-gray-500 to-gray-700',
-      cardBg: 'bg-gradient-to-br from-slate-800/70 via-slate-900/60 to-zinc-900/70'
+      cardBg: 'bg-gradient-to-br from-purple-900/70 via-violet-900/60 to-indigo-900/70'
     },
     {
       name: 'PostgreSQL',
       logo: '🐘',
       color: 'from-blue-500 to-blue-700',
-      cardBg: 'bg-gradient-to-br from-sky-900/70 via-slate-900/60 to-blue-900/70'
+      cardBg: 'bg-gradient-to-br from-indigo-900/70 via-purple-900/60 to-violet-900/70'
     },
     {
       name: 'Git',
       logo: '📝',
       color: 'from-orange-500 to-red-500',
-      cardBg: 'bg-gradient-to-br from-orange-900/70 via-slate-900/60 to-rose-900/70'
+      cardBg: 'bg-gradient-to-br from-fuchsia-900/70 via-purple-900/60 to-pink-900/70'
     },
     {
       name: 'REST API',
       logo: '🔗',
       color: 'from-green-400 to-teal-400',
-      cardBg: 'bg-gradient-to-br from-teal-900/70 via-slate-900/60 to-emerald-900/70'
+      cardBg: 'bg-gradient-to-br from-violet-900/70 via-purple-900/60 to-fuchsia-900/70'
     },
     {
       name: 'HTML5',
       logo: '🌐',
       color: 'from-orange-500 to-red-400',
-      cardBg: 'bg-gradient-to-br from-orange-900/70 via-slate-900/60 to-red-900/70'
+      cardBg: 'bg-gradient-to-br from-purple-900/70 via-fuchsia-900/60 to-pink-900/70'
     }
   ];
 

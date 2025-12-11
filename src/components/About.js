@@ -7,10 +7,10 @@ function About() {
         <h2 className="text-4xl font-bold text-white mb-8 text-center">About Me</h2>
         <div className="about-card rounded-2xl p-8">
           <p className="text-white/90 leading-relaxed text-lg mb-8">
-            I am a dedicated 5th-year Software Engineering student with a strong foundation in 
-            full-stack development, algorithms, and software architecture. My journey in technology 
-            has been driven by curiosity and a passion for solving complex problems through elegant 
-            code solutions. I specialize in modern web technologies and am constantly exploring 
+            I am a dedicated 5th-year Software Engineering student with a strong foundation in
+            full-stack development, algorithms, and software architecture. My journey in technology
+            has been driven by curiosity and a passion for solving complex problems through elegant
+            code solutions. I specialize in modern web technologies and am constantly exploring
             emerging trends in AI, cloud computing, and mobile development.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
