@@ -104,21 +104,21 @@ function Skills() {
   ];
 
   const MarqueeRow = ({ skills, reverse = false, speed = '40s' }) => (
-    <div className="marquee-container mb-6 relative">
-      <div className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-r from-slate-900/10 via-slate-800/5 to-slate-900/10" />
+    <div className="marquee-container mb-4 md:mb-6 relative overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 rounded-2xl md:rounded-3xl bg-gradient-to-r from-slate-900/10 via-slate-800/5 to-slate-900/10 z-10" />
       <div
-        className={`marquee-track flex space-x-6 ${reverse ? 'animate-marquee-reverse' : 'animate-marquee'} relative`}
+        className={`marquee-track flex space-x-4 md:space-x-6 ${reverse ? 'animate-marquee-reverse' : 'animate-marquee'} relative`}
         style={{ animationDuration: speed }}
       >
         {[...skills, ...skills].map((skill, index) => (
           <div
             key={`${skill.name}-${index}`}
-            className={`skill-item flex-shrink-0 w-48 rounded-xl p-6 flex flex-col items-center justify-center border border-white/10 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-xl group ${skill.cardBg}`}
+            className={`skill-item flex-shrink-0 w-40 sm:w-44 md:w-48 rounded-xl p-4 md:p-6 flex flex-col items-center justify-center border border-white/10 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-xl group ${skill.cardBg}`}
           >
-            <div className={`w-16 h-16 rounded-xl flex items-center justify-center mb-4 bg-gradient-to-br ${skill.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-              <span className="text-2xl filter brightness-100 contrast-100">{skill.logo}</span>
+            <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center mb-3 md:mb-4 bg-gradient-to-br ${skill.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+              <span className="text-xl sm:text-2xl md:text-2xl filter brightness-100 contrast-100">{skill.logo}</span>
             </div>
-            <h3 className="text-lg font-semibold text-white text-center group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-300 transition-all duration-300">
+            <h3 className="text-base sm:text-lg md:text-lg font-semibold text-white text-center group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-300 transition-all duration-300">
               {skill.name}
             </h3>
           </div>
@@ -128,35 +128,37 @@ function Skills() {
   );
 
   const StatsCard = ({ number, text, color }) => (
-    <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:border-white/20">
-      <div className={`text-3xl font-bold ${color} mb-2`}>{number}</div>
-      <div className="text-gray-300 font-medium">{text}</div>
+    <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/10 transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:border-white/20">
+      <div className={`text-2xl md:text-3xl font-bold ${color} mb-1 md:mb-2`}>{number}</div>
+      <div className="text-gray-300 text-sm md:text-base font-medium">{text}</div>
     </div>
   );
 
   return (
-    <section id="skills" className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 text-white flex items-center justify-center p-6">
-      <div className="max-w-7xl mx-auto w-full">
+    <section id="skills" className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 text-white flex items-center justify-center p-4 md:p-6">
+      <div className="max-w-7xl mx-auto w-full px-2 sm:px-4">
         {/* Header Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-white/5 backdrop-blur-sm px-6 py-3 rounded-full border border-white/10 mb-6">
+        <div className="text-center mb-12 md:mb-16">
+          <div className="inline-flex items-center space-x-2 bg-white/5 backdrop-blur-sm px-4 py-2 md:px-6 md:py-3 rounded-full border border-white/10 mb-4 md:mb-6">
             <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-            <span className="text-cyan-300 text-sm font-semibold tracking-wider">TECHNICAL EXPERTISE</span>
+            <span className="text-cyan-300 text-xs sm:text-sm md:text-sm font-semibold tracking-wider">TECHNICAL EXPERTISE</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
             Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">Technologies</span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-2">
             Mastery of essential technologies for building modern, scalable web applications
           </p>
         </div>
 
         {/* Skills Marquee Rows */}
-        <MarqueeRow skills={skillsRow1} speed="45s" />
-        <MarqueeRow skills={skillsRow2} speed="50s" reverse={true} />
+        <div className="px-2">
+          <MarqueeRow skills={skillsRow1} speed="45s" />
+          <MarqueeRow skills={skillsRow2} speed="50s" reverse={true} />
+        </div>
 
         {/* Stats Section */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div className="mt-12 md:mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 text-center px-2">
           <StatsCard number="16+" text="Technologies" color="text-blue-400" />
           <StatsCard number="5+" text="Years Experience" color="text-teal-400" />
           <StatsCard number="50+" text="Projects" color="text-amber-400" />
@@ -220,7 +222,7 @@ function Skills() {
           backdrop-filter: blur(10px);
           border: 1px solid rgba(255, 255, 255, 0.08);
           transition: all 0.3s ease;
-          min-width: 180px;
+          min-width: 160px;
         }
 
         .skill-item:hover {
@@ -228,6 +230,55 @@ function Skills() {
           box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
           border-color: rgba(255, 255, 255, 0.2);
           background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Mobile responsive adjustments */
+        @media (max-width: 640px) {
+          .marquee-container {
+            mask: linear-gradient(
+              90deg,
+              transparent,
+              white 5%,
+              white 95%,
+              transparent
+            );
+            -webkit-mask: linear-gradient(
+              90deg,
+              transparent,
+              white 5%,
+              white 95%,
+              transparent
+            );
+          }
+          
+          .animate-marquee,
+          .animate-marquee-reverse {
+            animation-duration: 35s !important;
+          }
+        }
+
+        @media (min-width: 641px) and (max-width: 768px) {
+          .marquee-container {
+            mask: linear-gradient(
+              90deg,
+              transparent,
+              white 8%,
+              white 92%,
+              transparent
+            );
+            -webkit-mask: linear-gradient(
+              90deg,
+              transparent,
+              white 8%,
+              white 92%,
+              transparent
+            );
+          }
+          
+          .animate-marquee,
+          .animate-marquee-reverse {
+            animation-duration: 40s !important;
+          }
         }
       `}</style>
     </section>
